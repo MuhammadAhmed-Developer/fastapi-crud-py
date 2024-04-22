@@ -37,6 +37,6 @@ def get_posts():
 @app.post("/posts")
 def createPost(post:Post):
     post_dict = post.dict()
-    post_dict["id"] = randrange(0 , 1000000000000)
+    post_dict["id"] = randrange(0 , 100000000)
     my_posts.append(post_dict)
     return {"data":post_dict}  
